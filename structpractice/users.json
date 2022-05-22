@@ -1,0 +1,17 @@
+[
+  {
+   "userName": "Kunal"
+  },
+  {
+   "userName": "Pooja",
+   "Permission": {
+    "admin": true
+   }
+  },
+  {
+   "userName": "Deepti",
+   "Permission": {
+    "write": true
+   }
+  }
+ ]
