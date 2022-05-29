@@ -14,7 +14,12 @@ func main() {
 
 queries:
 	for _, q := range query {
+	search:
 		for i, w := range words {
+			switch q {
+			case "and", "or", "the":
+				break search
+			}
 			if strings.ToUpper(q) == strings.ToUpper(w) {
 				fmt.Printf("#%-2d: %q\n", i+1, w)
 
