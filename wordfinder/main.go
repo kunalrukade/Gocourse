@@ -6,13 +6,15 @@ import (
 	"strings"
 )
 
-const corpus = "" + "lazy car jumps again and again and again and again"
+const corpus = "" + "lazy cat jumps again and again and again and again"
 
 func main() {
 	words := strings.Fields(corpus)
+	// fmt.Println(words)
 	query := os.Args[1:]
 
 queries:
+
 	for _, q := range query {
 	search:
 		for i, w := range words {
@@ -22,10 +24,9 @@ queries:
 			}
 			if strings.ToUpper(q) == strings.ToUpper(w) {
 				fmt.Printf("#%-2d: %q\n", i+1, w)
-
 				continue queries
 			}
+
 		}
 	}
-
 }
