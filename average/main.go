@@ -3,15 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	student1 := [3]float64{3, 6, 8}
-	student2 := [3]float64{6, 8, 3}
+	students := [2][3]float64{
+		{8, 5, 4},
+		{7, 8, 6},
+	}
 
 	var sum float64
 
-	sum += student1[0] + student1[1] + student1[2]
-	sum += student2[0] + student2[1] + student2[2]
+	sum += students[0][0] + students[0][1] + students[0][2]
+	sum += students[1][0] + students[1][1] + students[1][2]
 
-	n := len((student1)) + len(student2)
+	n := len(students) * len(students[0])
 
 	fmt.Printf("The average of students is %f", sum/float64(n))
 
