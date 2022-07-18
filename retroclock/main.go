@@ -9,103 +9,10 @@ import (
 
 func main() {
 
-	type placeholder [5]string
-
-	zero := placeholder{
-		"███",
-		"█ █",
-		"█ █",
-		"█ █",
-		"███",
-	}
-
-	one := placeholder{
-		"██ ",
-		" █ ",
-		" █ ",
-		" █ ",
-		"███",
-	}
-
-	two := placeholder{
-		"███",
-		"  █",
-		"███",
-		"█  ",
-		"███",
-	}
-
-	three := placeholder{
-		"███",
-		"  █",
-		"███",
-		"  █",
-		"███",
-	}
-
-	four := placeholder{
-		"█  ",
-		"█  ",
-		"█ █",
-		"███",
-		"  █",
-	}
-
-	five := placeholder{
-		"███",
-		"█  ",
-		"███",
-		"  █",
-		"███",
-	}
-
-	six := placeholder{
-		"███",
-		"█  ",
-		"███",
-		"█ █",
-		"███",
-	}
-
-	seven := placeholder{
-		"███",
-		"  █",
-		"  █",
-		"  █",
-		"  █",
-	}
-
-	eight := placeholder{
-		"███",
-		"█ █",
-		"███",
-		"█ █",
-		"███",
-	}
-
-	nine := placeholder{
-		"███",
-		"█ █",
-		"███",
-		"  █",
-		"███",
-	}
-
-	colon := placeholder{
-		"   ",
-		" ░ ",
-		"   ",
-		" ░ ",
-		"   ",
-	}
-
-	digits := [...]placeholder{
-		zero, one, two, three, four, five, six, seven, eight, nine,
-	}
-
 	screen.Clear()
 
 	for {
+		
 
 		screen.MoveTopLeft()
 
@@ -114,8 +21,6 @@ func main() {
 		hour, min, sec := now.Hour(), now.Minute(), now.Second()
 
 		//fmt.Printf("hour: %d,minute: %d, second: %d\n", hour, min, sec)
-
-		_ = digits
 
 		clock := [...]placeholder{
 			digits[hour/10], digits[hour%10],
